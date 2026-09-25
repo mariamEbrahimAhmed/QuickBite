@@ -1,5 +1,6 @@
-package com.quickbite;
+package com.quickbite.controller;
 
+import com.quickbite.dto.HealthResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +12,5 @@ public class HealthController {
     @GetMapping
     public HealthResponse health() {
         return new HealthResponse("UP", "QuickBite backend is running");
-    }
-
-    public record HealthResponse(String status, String message) {
     }
 }
